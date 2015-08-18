@@ -1,21 +1,19 @@
-<%= form_for(@headline) do |f| %>
-  <% if @headline.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@headline.errors.count, "error") %> prohibited this headline from being saved:</h2>
 
-      <ul>
-      <% @headline.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <%= form_for(@headline) do |f| %>
+    <% if @headline.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@headline.errors.count, "error") %> prohibited this headline from being saved:</h2>
+
+        <ul>
+        <% @headline.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.text_field :title, size:'50', placeholder:'keep it short and sweet' %>
+      <%= f.submit :save, class:'btn btn-primary' %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>

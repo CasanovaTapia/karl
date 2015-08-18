@@ -1,4 +1,17 @@
 <div id="top" class="head-info text-center">
-	<h1>Ching Casanova Tapia</h1>
-	<p>Design, Development, and Branding</p>
+	<h5>Design, Development, & Branding</h5>
+</div>
+<div id="news">
+	<h2>News</h2>
+	<% unless @headlines.size == 0 %>
+		<% @headlines.each do |headline| %>
+			<p>
+				<%= "#{headline.created_at.strftime("%m/%d/%Y")}, #{headline.title}" %>
+				<%= link_to "DELETE", headline_path(headline), method: :delete %>
+			</p>
+		<% end %>
+	<% else %>
+		<p>No news yet!</p>
+	<% end %>
+	<%= link_to "Add", new_headline_path, class:'btn ct-btn' %>
 </div>

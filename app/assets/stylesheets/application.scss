@@ -1,19 +1,100 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
- // Bottom of file
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "fonts.css.scss";
+@import "headlines.css.scss";
+@import "static.css.scss";
+
+
+.btn {
+  border-radius: 0;
+  width: 100px;
+  border: 3px solid #fff;
+}
+.btn:hover, .btn:visited, .btn:active {
+  color: #fff;
+  background-color: #8e44ad;
+  border: 3px solid #8e44ad;
+  transition: all .2s ease-in-out;
+}
+.btn-primary {
+  background-color: transparent;
+}
+.btn-primary:hover, .btn-primary:visited, .btn-primary:active {
+  color: #fff;
+  background-color: #16a085;
+  border: 3px solid #16a085;
+  transition: all .2s ease-in-out;
+}
+a {
+  color: #eee;
+}
+a:hover, a:visited, a:active {
+  color: #8e44ad;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+body {
+  background-color: #333;
+	height: 100vh;
+}
+
+#top-brand {
+  img {
+    max-width: 200px;
+  }
+}
+@media (max-width: 767px) {
+  #top-brand {
+    position: fixed;
+    top: 15px;
+    left: 10px;
+    img {
+      max-width: 150px;
+    }
+  }
+}
+@media (min-width: 768px) {
+  #top-brand {
+    padding-top: 25px;
+    display:block;
+  }
+}
+
+nav.navbar.navbar-default {
+  color: #333;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  padding-top:0;
+  a:hover, a:visited, a:active {
+    color: #8e44ad;
+    text-decoration: none;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  .navbar-collapse {
+    margin-top: 40px;
+    float:right;
+    background-color: #444;
+  }
+}
+@media (min-width: 768px) {
+  .navbar .nav,
+  .navbar .nav > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    *zoom:1; /* hasLayout ie7 trigger */
+    vertical-align: top;
+    margin-top: -10px;
+  }
+  .navbar-inner {
+    text-align:center;
+  }
+}

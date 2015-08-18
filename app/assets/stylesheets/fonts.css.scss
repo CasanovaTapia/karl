@@ -1,0 +1,33 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,400italic|PT+Sans:400,700);
+
+h1, h2, h3, h4, h5, h6, .btn {
+	font-family: 'PT Sans', sans-serif;
+  font-weight:700;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+	color: #fff;
+}
+h3, h4, h5, h6 {
+	letter-spacing: .3em;
+}
+.big {
+	font-size: 5em;
+	font-family: 'PT Sans', sans-serif;
+	font-weight:700;
+	text-transform: uppercase;
+	letter-spacing: .15em;
+}
+body{
+	font-family: 'PT Serif', serif;
+	color: #eee;
+	p {
+		font-size: 1.1em;
+		letter-spacing: .02em;
+	}
+}
+nav.navbar.navbar-default {
+	font-family: 'PT Sans', sans-serif;
+	font-weight:700;
+	text-transform: uppercase;
+	letter-spacing: .35em;
+}
