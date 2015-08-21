@@ -12,6 +12,7 @@ gem 'pg'
 
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'pundit'
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development

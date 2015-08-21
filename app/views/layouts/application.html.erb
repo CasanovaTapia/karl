@@ -45,6 +45,11 @@
         <ul class="nav navbar-nav">
           <li><%= link_to 'About', static_about_path %></li>
           <li><%= link_to 'Contact', static_contact_path %></li>
+          <% if current_user %>
+            <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to 'Are you Ching?', new_user_session_path %></li>
+          <% end %>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

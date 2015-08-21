@@ -7,11 +7,15 @@
 		<% @headlines.each do |headline| %>
 			<p>
 				<%= "#{headline.created_at.strftime("%m/%d/%Y")}, #{headline.title}" %>
-				<%= link_to "DELETE", headline_path(headline), method: :delete %>
+				<% if policy(Headline.new).destroy? %>
+					<%= link_to "DELETE", headline_path(headline), method: :delete %>
+				<% end %>
 			</p>
 		<% end %>
 	<% else %>
 		<p>No news yet!</p>
 	<% end %>
-	<%= link_to "Add", new_headline_path, class:'btn ct-btn' %>
+	<% if policy(Headline.new).create? %>
+		<%= link_to "Add", new_headline_path, class:'btn ct-btn' %>
+	<% end %>
 </div>
