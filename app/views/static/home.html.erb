@@ -1,21 +1,23 @@
-<div id="top" class="head-info text-center">
-	<h5>Design, Development, & Branding</h5>
-</div>
-<div id="news">
-	<h2>News</h2>
-	<% unless @headlines.size == 0 %>
-		<% @headlines.each do |headline| %>
-			<p>
-				<%= "#{headline.created_at.strftime("%m/%d/%Y")}, #{headline.title}" %>
-				<% if policy(Headline.new).destroy? %>
-					<%= link_to "DELETE", headline_path(headline), method: :delete %>
-				<% end %>
-			</p>
+<div class="home row">
+	<div class="col-md-6 text-right">
+		<%= image_tag("karl2.jpeg", class:'img-home') %>
+	</div>
+	<div class="news col-md-6">
+		<h4 class="text-center">News</h4>
+		<% unless @headlines.size == 0 %>
+			<% @headlines.each do |headline| %>
+				<p>
+					<%= "#{headline.created_at.strftime("%m/%d/%Y")}, #{headline.title}" %>
+					<% if policy(Headline.new).destroy? %>
+						<%= link_to "DELETE", headline_path(headline), method: :delete %>
+					<% end %>
+				</p>
+			<% end %>
+		<% else %>
+			<p>No news yet!</p>
 		<% end %>
-	<% else %>
-		<p>No news yet!</p>
-	<% end %>
-	<% if policy(Headline.new).create? %>
-		<%= link_to "Add", new_headline_path, class:'btn ct-btn' %>
-	<% end %>
+		<% if policy(Headline.new).create? %>
+			<%= link_to "Add", new_headline_path, class:'btn ct-btn' %>
+		<% end %>
+	</div>
 </div>

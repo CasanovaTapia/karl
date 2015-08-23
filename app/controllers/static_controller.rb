@@ -9,4 +9,10 @@ class StaticController < ApplicationController
 
 	def contact
 	end
+
+	def film
+	end
+
+	def reel
+	end
 end

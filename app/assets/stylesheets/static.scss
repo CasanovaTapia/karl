@@ -1,0 +1,36 @@
+// Place all the styles related to the static controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// home
+.home {
+	height: 100vh;
+	// background-image:url("karl1.jpeg");
+	// background-repeat: no-repeat;
+	// background-position: left bottom;
+	// background-size: 40%;
+	.img-home{
+		height: 80vh;
+	}
+	.news {
+		height: 80vh;
+		max-width: 400px;
+		border: 1px solid #ddd;
+	}
+}
+
+
+#film {
+	.trailer {
+		height: 250px;
+		border: 1px solid #ddd;
+		padding-top: 50px;
+	}
+}
+
+
+#about {
+	.img-bio {
+		height: 80vh;
+	}
+}

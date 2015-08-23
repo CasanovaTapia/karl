@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BaseRails</title>
+  <title>Karl E Landler</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <div class="auth"
+    <% if current_user %>
+      <h6><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></h6>
+      <h6><%= link_to 'Change pass', edit_user_password_path %></h6>
+    <% else %>
+      <h6><%= link_to 'Karl?', new_user_session_path %></h6>
+    <% end %>
+  </div>
 
   <!-- Flash messages  -->
   <% if flash[:notice] %>
@@ -26,7 +35,7 @@
     </div>
   <% end %>
 
-  <span id="top-brand" class="text-center"><%= link_to image_tag('ctlogowhite.png'), root_path %></span><br/>
+  <h3 class="text-center"><%= link_to "Karl E. Landler", root_path %></h3>
   <!-- Navbar -->
   <nav class="navbar navbar-default navbar-inner">
     <div class="container-fluid">
@@ -43,13 +52,10 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><%= link_to 'About', static_about_path %></li>
-          <li><%= link_to 'Contact', static_contact_path %></li>
-          <% if current_user %>
-            <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
-          <% else %>
-            <li><%= link_to 'Are you Ching?', new_user_session_path %></li>
-          <% end %>
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Reel', static_reel_path %></li>
+          <li><%= link_to 'Bio', static_about_path %></li>
+          <li><%= link_to 'Filmmaker', static_film_path %></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
