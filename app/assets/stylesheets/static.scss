@@ -15,12 +15,14 @@
 	}
 }
 
-
-#film {
+.film {
 	.trailer {
 		height: 250px;
 		border: 1px solid #ddd;
 		padding-top: 50px;
+	}
+	img {
+		height: 60vh;
 	}
 }
 
