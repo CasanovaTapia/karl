@@ -11,7 +11,6 @@
   <div class="auth"
     <% if current_user %>
       <h6><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></h6>
-      <h6><%= link_to 'Change pass', edit_user_password_path %></h6>
     <% else %>
       <h6><%= link_to 'Karl?', new_user_session_path %></h6>
     <% end %>
