@@ -69,12 +69,13 @@ body {
   }
 }
 
+
 nav.navbar.navbar-default {
   color: #333;
   background-color: transparent;
   border: none;
   text-transform: uppercase;
-  letter-spacing: .15em;
+  letter-spacing: .5em;
   padding-top:0;
   a:hover, a:visited, a:active {
     color: #2980b9;
@@ -108,8 +109,23 @@ nav.navbar.navbar-default {
   }
 }
 
-.auth {
+.logo-top {
+  letter-spacing: 0;
+}
+
+.social {
   position: fixed;
   top: 10px;
+  left: 10px;
+  img {
+    height:30px;
+    width:auto;
+  }
+}
+
+
+.auth {
+  position: fixed;
+  bottom: 10px;
   right: 10px;
 }

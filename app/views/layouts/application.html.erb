@@ -8,12 +8,19 @@
 </head>
 <body>
 
-  <div class="auth"
+  <div class="auth">
     <% if current_user %>
       <h6><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></h6>
     <% else %>
       <h6><%= link_to 'Karl?', new_user_session_path %></h6>
     <% end %>
+  </div>
+
+  <div class="social">
+    <%= link_to image_tag("instagram.png"), 'https://instagram.com/karlelandler', target:"_blank" %>
+    <%= link_to image_tag("facebook.png"), 'https://www.facebook.com/karlelandleroffcial', target:"_blank" %>
+    <%= link_to image_tag("imdb.png"), 'http://www.imdb.com/name/nm2076652/', target:"_blank" %>
+    <%= link_to image_tag("twitter.png"), 'https://twitter.com/karlelandler', target:"_blank" %>
   </div>
 
   <!-- Flash messages  -->
@@ -34,7 +41,7 @@
     </div>
   <% end %>
 
-  <h3 class="text-center"><%= link_to "Karl E. Landler", root_path %></h3>
+  <h1 class="logo-top text-center"><%= link_to "Karl E. Landler", root_path %></h1>
   <!-- Navbar -->
   <nav class="navbar navbar-default navbar-inner">
     <div class="container-fluid">
