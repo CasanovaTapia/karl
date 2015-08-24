@@ -6,8 +6,8 @@
 		<h4 class="text-center">News</h4>
 		<% unless @headlines.size == 0 %>
 			<% @headlines.each do |headline| %>
-				<p>
-					<%= "#{headline.created_at.strftime("%m/%d/%Y")}, #{headline.title}" %>
+				<p class="small"><%= headline.created_at.strftime("%m/%d/%Y") %></p>
+				<p><%= headline.title %>
 					<% if policy(Headline.new).destroy? %>
 						<%= link_to "DELETE", headline_path(headline), method: :delete %>
 					<% end %>
@@ -17,7 +17,7 @@
 			<p>No news yet!</p>
 		<% end %>
 		<% if policy(Headline.new).create? %>
-			<%= link_to "Add", new_headline_path, class:'btn ct-btn' %>
+			<%= link_to "Add", new_headline_path, class:'btn' %>
 		<% end %>
 	</div>
 </div>

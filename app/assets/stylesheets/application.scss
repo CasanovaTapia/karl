@@ -20,16 +20,16 @@ html{
   width: 100px;
   border: 3px solid #fff;
 }
-.btn:hover, .btn:visited, .btn:active {
+.btn:hover, .btn:active {
   color: #fff;
-  background-color: #8e44ad;
-  border: 3px solid #8e44ad;
+  background-color: #2980b9;
+  border: 3px solid #2980b9;
   transition: all .2s ease-in-out;
 }
 .btn-primary {
   background-color: transparent;
 }
-.btn-primary:hover, .btn-primary:visited, .btn-primary:active {
+.btn-primary:hover, .btn-primary:active {
   color: #fff;
   background-color: #16a085;
   border: 3px solid #16a085;
@@ -38,7 +38,7 @@ html{
 a {
   color: #eee;
 }
-a:hover, a:visited, a:active {
+a:hover, a:focus, a:active {
   color: #2980b9;
   text-decoration: none;
   transition: all .2s ease-in-out;
