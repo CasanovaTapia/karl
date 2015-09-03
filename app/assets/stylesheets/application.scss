@@ -111,19 +111,23 @@ nav.navbar.navbar-default {
 }
 
 .logo-top {
-  letter-spacing: 0;
+  letter-spacing: .3em;
+  font-size: 3em;
+}
+
+.main-content {
+  height: 70vh;
 }
 
 .social {
   position: fixed;
-  top: 10px;
+  bottom: 10px;
   left: 10px;
   img {
     height:25px;
     width:auto;
   }
 }
-
 
 .auth {
   position: fixed;
@@ -137,5 +141,6 @@ nav.navbar.navbar-default {
   left: 10px;
   img {
     height: 15px;
+
   }
 }
